@@ -24,126 +24,126 @@ systemStatus = 0
 
 def show0():
     #0
-    sega.on()
-    segb.on()
-    segc.on()
-    segd.on()
-    sege.on()
-    segf.on()
-    segg.off()
+    sega.off()
+    segb.off()
+    segc.off()
+    segd.off()
+    sege.off()
+    segf.off()
+    segg.on()
 
 
 def show1():
     #1
-    sega.off()
-    segb.on()
-    segc.on()
-    segd.off()
-    sege.off()
-    segf.off()
-    segg.off()
+    sega.on()
+    segb.off()
+    segc.off()
+    segd.on()
+    sege.on()
+    segf.on()
+    segg.on()
 
 
 def show2():
     #2
-    sega.on()
-    segb.on()
-    segc.off()
-    segd.on()
-    sege.on()
-    segf.off()
-    segg.on()  
-    
-
-def show3():
-    #3
-    sega.on()
-    segb.on()
-    segc.on()
-    segd.on()
-    sege.off()
-    segf.off()
-    segg.on() 
-
-
-def show4():
-    #4
     sega.off()
-    segb.on()
+    segb.off()
     segc.on()
     segd.off()
     sege.off()
     segf.on()
-    segg.on() 
+    segg.off()  
+    
+
+def show3():
+    #3
+    sega.off()
+    segb.off()
+    segc.off()
+    segd.off()
+    sege.on()
+    segf.on()
+    segg.off() 
+
+
+def show4():
+    #4
+    sega.on()
+    segb.off()
+    segc.off()
+    segd.on()
+    sege.on()
+    segf.off()
+    segg.off() 
 
 
 def show5():
     #5
-    sega.on()
-    segb.off()
-    segc.on()
-    segd.on()
-    sege.off()
-    segf.on()
-    segg.on()  
+    sega.off()
+    segb.on()
+    segc.off()
+    segd.off()
+    sege.on()
+    segf.off()
+    segg.off()  
  
 
 
 def show6():
     #6
-    sega.on()
-    segb.off()
-    segc.on()
-    segd.on()
-    sege.on()
-    segf.on()
-    segg.on() 
+    sega.off()
+    segb.on()
+    segc.off()
+    segd.off()
+    sege.off()
+    segf.off()
+    segg.off() 
 
 
 def show7():
     #7
-    sega.on()
-    segb.on()
-    segc.on()
-    segd.off()
-    sege.off()
-    segf.off()
-    segg.off()     
+    sega.off()
+    segb.off()
+    segc.off()
+    segd.on()
+    sege.on()
+    segf.on()
+    segg.on()     
 
 
 
 def show8():
     #8
-    sega.on()
-    segb.on()
-    segc.on()
-    segd.on()
-    sege.on()
-    segf.on()
-    segg.on()  
+    sega.off()
+    segb.off()
+    segc.off()
+    segd.off()
+    sege.off()
+    segf.off()
+    segg.off()  
 
 
 def show9():
     #9
-    sega.on()
-    segb.on()
-    segc.on()
-    segd.off()
-    sege.off()
-    segf.on()
-    segg.on()    
+    sega.off()
+    segb.off()
+    segc.off()
+    segd.on()
+    sege.on()
+    segf.off()
+    segg.off()    
 
 
 
 def showA():
     #A
-    sega.on()
-    segb.on()
-    segc.on()
-    segd.off()
-    sege.on()
-    segf.on()
-    segg.on()
+    sega.off()
+    segb.off()
+    segc.off()
+    segd.on()
+    sege.off()
+    segf.off()
+    segg.off()
 
 def cout_up():
     #0
