@@ -197,22 +197,34 @@ def cout_down():
     show0()
     sleep(1)
 
-show0()
-while True:
-    if systemStatus == 0 and btn.is_pressed:
+def LedTurnOn():
+    led_alarm.on()
+       
+def LedTurnOff():
+    led_alarm.off()
+    
+def UpdateSysStatus():
+    if systemStatus == 0:
         cout_up()
         showA()
+        led_alarm.on() # ici
         systemStatus = 1
-    elif systemStatus == 1 and btn.is_pressed:
+    elif systemStatus == 1:
         cout_down()
-        show0()
+        led_alarm.off()
         systemStatus = 0
     if systemStatus == 1:
-        if zone1.is_pressed:
+        if zone1:
             show1()
-        elif zone2.is_pressed:
+            led_alarm.blink()
+        elif zone2:
             show2()
-        elif zone3.is_pressed:
+            led_alarm.blink()
+        elif zone3:
             show3()
-        elif zone4.is_pressed:
+            led_alarm.blink()
+        elif zone4:
             show4()
+            led_alarm.blink()
+
+btn.when_pressed = UpdateSysStatus()            
