@@ -1,6 +1,8 @@
 from gpiozero import LED, Button
 from time import sleep
 
+
+
 #A=8,B=9,C=10,D=11,E=12,F=13,G=17
 sega = LED(8)
 segb = LED(9)
@@ -35,6 +37,7 @@ def show0():
 
 def show1():
     #1
+
     sega.on()
     segb.off()
     segc.off()
@@ -42,6 +45,202 @@ def show1():
     sege.on()
     segf.on()
     segg.on()
+
+
+
+def show2():
+    #2
+    sega.off()
+    segb.off()
+    segc.on()
+    segd.off()
+    sege.off()
+    segf.on()
+    segg.off()  
+    
+
+def show3():
+    #3
+    sega.off()
+    segb.off()
+    segc.off()
+    segd.off()
+    sege.on()
+    segf.on()
+    segg.off() 
+
+
+def show4():
+    #4
+    sega.on()
+    segb.off()
+    segc.off()
+    segd.on()
+    sege.on()
+    segf.off()
+    segg.off() 
+
+
+def show5():
+    #5
+    sega.off()
+    segb.on()
+    segc.off()
+    segd.off()
+    sege.on()
+    segf.off()
+    segg.off()  
+ 
+
+
+def show6():
+    #6
+    sega.off()
+    segb.on()
+    segc.off()
+    segd.off()
+    sege.off()
+    segf.off()
+    segg.off() 
+
+
+def show7():
+    #7
+    sega.off()
+    segb.off()
+    segc.off()
+    segd.on()
+    sege.on()
+    segf.on()
+    segg.on()     
+
+
+
+def show8():
+    #8
+    sega.off()
+    segb.off()
+    segc.off()
+    segd.off()
+    sege.off()
+    segf.off()
+    segg.off()  
+
+
+def show9():
+    #9
+    sega.off()
+    segb.off()
+    segc.off()
+    segd.on()
+    sege.on()
+    segf.off()
+    segg.off()    
+
+
+
+def showA():
+    #A
+    sega.off()
+    segb.off()
+    segc.off()
+    segd.on()
+    sege.off()
+    segf.off()
+    segg.off()
+
+
+def show2():
+    #2
+    sega.off()
+    segb.off()
+    segc.on()
+    segd.off()
+    sege.off()
+    segf.on()
+    segg.off()  
+    
+def show3():
+    #3
+    sega.off()
+    segb.off()
+    segc.off()
+    segd.off()
+    sege.on()
+    segf.on()
+    segg.off() 
+
+def show4():
+    #4
+    sega.on()
+    segb.off()
+    segc.off()
+    segd.on()
+    sege.on()
+    segf.on()
+    segg.on()
+    segf.off()
+    segg.off() 
+
+def show5():
+    #5
+    sega.off()
+    segb.on()
+    segc.off()
+    segd.off()
+    sege.on()
+    segf.off()
+    segg.off()  
+
+def show6():
+    #6
+    sega.off()
+    segb.on()
+    segc.off()
+    segd.off()
+    sege.off()
+    segf.off()
+    segg.off() 
+
+def show7():
+    #7
+    sega.off()
+    segb.off()
+    segc.off()
+    segd.on()
+    sege.on()
+    segf.on()
+    segg.on()     
+
+def show8():
+    #8
+    sega.off()
+    segb.off()
+    segc.off()
+    segd.off()
+    sege.off()
+    segf.off()
+    segg.off()  
+
+def show9():
+    #9
+    sega.off()
+    segb.off()
+    segc.off()
+    segd.on()
+    sege.on()
+    segf.off()
+    segg.off()    
+
+def showA():
+    #A
+    sega.off()
+    segb.off()
+    segc.off()
+    segd.on()
+    sege.off()
+    segf.off()
+    segg.off()
 
 def show2():
     #2

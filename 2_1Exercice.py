@@ -165,6 +165,10 @@ def cout_up():
     show9()
     sleep(1)
 
+    #A
+    showA()
+
+
 def cout_down():
     #9
     show9()    
@@ -202,6 +206,7 @@ def LedTurnOn():
        
 def LedTurnOff():
     led_alarm.off()
+
     
 def UpdateSysStatus():
     if systemStatus == 0:
@@ -228,3 +233,41 @@ def UpdateSysStatus():
             led_alarm.blink()
 
 btn.when_pressed = UpdateSysStatus()            
+
+
+def BlinkZoneBtn():
+    zones = {
+        zone1: show1,
+        zone2: show2,
+        zone3: show3,
+        zone4: show4
+    }
+    
+    for key, val in zones.items():
+        if key:
+            val()
+            led_alarm.blink()
+            break  
+
+
+    
+def UpdateSysStatus():
+    if systemStatus == 0:
+        cout_up()     
+        LedTurnOn()
+        systemStatus = 1
+    elif systemStatus == 1:
+        cout_down()
+        LedTurnOff()
+        systemStatus = 0
+    if systemStatus == 1:
+        BlinkZoneBtn()
+
+def btnPressed(btnSelected,Defs):
+    btnSelected.when_Pressed = Defs
+    
+
+btnPressed(btn,UpdateSysStatus)    
+
+
+
