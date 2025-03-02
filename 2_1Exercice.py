@@ -10,10 +10,11 @@ sege = LED(12)
 segf = LED(13)
 segg = LED(17)
 led_alarm = LED(26)
-#btn_activate
 
+#btn_activate
 btn = Button(27)
 btn_reset = Button(21)
+
 #Alarm zones
 zone1 = Button(22)
 zone2 = Button(5)
@@ -168,7 +169,6 @@ def cout_up():
     #A
     showA()
 
-
 def cout_down():
     #9
     show9()    
@@ -206,68 +206,44 @@ def LedTurnOn():
        
 def LedTurnOff():
     led_alarm.off()
-
     
-def UpdateSysStatus():
-    if systemStatus == 0:
-        cout_up()
-        showA()
-        led_alarm.on() # ici
-        systemStatus = 1
-    elif systemStatus == 1:
-        cout_down()
-        led_alarm.off()
-        systemStatus = 0
-    if systemStatus == 1:
-        if zone1:
-            show1()
-            led_alarm.blink()
-        elif zone2:
-            show2()
-            led_alarm.blink()
-        elif zone3:
-            show3()
-            led_alarm.blink()
-        elif zone4:
-            show4()
-            led_alarm.blink()
+def BlinkLed():
+    led_alarm.blink()
 
-btn.when_pressed = UpdateSysStatus()            
+     
 
-
-def BlinkZoneBtn():
-    zones = {
-        zone1: show1,
-        zone2: show2,
-        zone3: show3,
-        zone4: show4
-    }
-    
-    for key, val in zones.items():
-        if key:
-            val()
-            led_alarm.blink()
-            break  
-
-
-    
 def UpdateSysStatus():
     if systemStatus == 0:
         cout_up()     
-        LedTurnOn()
         systemStatus = 1
-    elif systemStatus == 1:
+        LedTurnOn()
+    else:
         cout_down()
-        LedTurnOff()
         systemStatus = 0
-    if systemStatus == 1:
-        BlinkZoneBtn()
+        LedTurnOff()
 
-def btnPressed(btnSelected,Defs):
-    btnSelected.when_Pressed = Defs
-    
+def Zone1_Verified():
+    if systemStatus ==1:
+        BlinkLed()
+        
+def Zone2_Verified():
+    if systemStatus ==1:
+        BlinkLed()
 
-btnPressed(btn,UpdateSysStatus)    
+def Zone3_Verified():
+    if systemStatus ==1:
+        BlinkLed()
 
-
-
+def Zone4_Verified():
+    if systemStatus ==1:
+        BlinkLed()
+def reset_verified():
+    if systemStatus==1:     
+        LedTurnOff()    
+                
+btn.when_pressed = UpdateSysStatus
+zone1.when_pressed= Zone1_Verified
+zone2.when_pressed= Zone2_Verified
+zone3.when_pressed= Zone3_Verified
+zone4.when_pressed= Zone4_Verified
+btn_reset.when_pressed = reset_verified
