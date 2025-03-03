@@ -397,10 +397,12 @@ def cout_down():
     sleep(1)
 
 show0()
+led_alarm.blink()
 while True:
     if systemStatus == 0 and btn.is_pressed:
         cout_up()
         showA()
+        led_alarm.on()
         systemStatus = 1
     elif systemStatus == 1 and btn.is_pressed:
         cout_down()

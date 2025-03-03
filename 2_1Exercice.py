@@ -201,46 +201,51 @@ def cout_down():
     show0()
     sleep(1)
 
-def LedTurnOn():
-    led_alarm.on()
+def LedTurnOn(led):
+    led.on()
        
-def LedTurnOff():
-    led_alarm.off()
+def LedTurnOff(led):
+    led.off()
     
-def BlinkLed():
-    led_alarm.blink()
+def BlinkLed(led):
+    led.blink()
 
      
 
 def UpdateSysStatus():
+     
     if systemStatus == 0:
-        cout_up()     
-        systemStatus = 1
+        cout_up()
         LedTurnOn()
+        systemStatus = 1
     else:
         cout_down()
-        systemStatus = 0
         LedTurnOff()
+        systemStatus = 0
 
 def Zone1_Verified():
     if systemStatus ==1:
-        BlinkLed()
+        show1()
+        BlinkLed(led_alarm)
         
 def Zone2_Verified():
     if systemStatus ==1:
-        BlinkLed()
+        show2()
+        BlinkLed(led_alarm)
 
 def Zone3_Verified():
     if systemStatus ==1:
-        BlinkLed()
+        show3()
+        BlinkLed(led_alarm)
 
 def Zone4_Verified():
     if systemStatus ==1:
-        BlinkLed()
+        show4()
+        BlinkLed(led_alarm)
 def reset_verified():
-    if systemStatus==1:     
-        LedTurnOff()    
-                
+    if systemStatus==1:  
+        LedTurnOff(led_alarm)    
+show0()                
 btn.when_pressed = UpdateSysStatus
 zone1.when_pressed= Zone1_Verified
 zone2.when_pressed= Zone2_Verified
